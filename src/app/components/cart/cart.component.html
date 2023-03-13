@@ -1,0 +1,25 @@
+<div *ngIf="cartProduct.length">
+    <div *ngIf="!onisEmptyCart()">
+        <button (click)="emptyCart()" class="btn empty-btn">Empty Cart</button>
+    </div>
+    <div *ngIf="!onisEmptyCart()" class="row cart-container">
+        <div class="col-5 col-lg-4">
+            <app-cart-item *ngFor="let cart of cartProduct" (itemRemoved)="onItemRemoved()" [cartItem]="cart" (tots)="onParentTotalChange($event)"></app-cart-item>
+           <span id="tots">Total: </span>
+            <span class="total">${{total.toFixed(2)}}</span>
+        </div>
+        <div class="col-lg-4">
+            <app-form-details [total]="total"></app-form-details>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!cartProduct.length || onisEmptyCart()" class="empty-cart">
+    <div >
+        <img src="../../../assets/cart.svg" alt="" class="empty-img">
+        <h1> Your Cart is Empty! ;(</h1>
+    </div>
+    <div>
+        <a id="empty-btn" routerLink="/products" class="btn empty-btn">Click to shop more!</a>
+    </div>
+</div>

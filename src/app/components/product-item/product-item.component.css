@@ -1,0 +1,19 @@
+.prod-item {
+    margin-bottom: 15%;
+  }
+
+  .prod-btn{
+    margin-top: 5%;
+    background-color: #13012b;
+    color: #ffffff;
+  }
+
+  .prod-qty {
+    width:100px;
+    margin-left: 30%;
+  }
+  
+  .prod-img:hover {
+    border: 2px solid #13012b;
+    cursor: pointer;
+  }

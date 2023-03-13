@@ -1,0 +1,21 @@
+<nav class="navbar header navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white store-link" routerLink="/">MyStore Ecommerce Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"   (click)="toggleNavbar = !toggleNavbar" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav"  [ngbCollapse]="toggleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item store-link">
+            <a class="nav-link text-white" aria-current="page" routerLink="/products">Products</a>
+          </li>
+          <li class="nav-item store-link">
+            <a class="nav-link text-white" routerLink="/cart">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  

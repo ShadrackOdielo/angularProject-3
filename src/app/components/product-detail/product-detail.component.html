@@ -1,0 +1,13 @@
+    <div class="detail-container">
+        <div class="">
+            <img src="{{product.url}}" alt="" class="prod-img">
+        </div>
+        <div class="detail-item">
+            <span><h1>{{ product.name }}</h1></span>
+            <span class="prod-desc"> {{ product.description }}</span>
+            <span>$ {{ product.price }}</span>
+            <span><input type="number" min="0" max="20" class="form-control select-input"/></span>
+            <button class="btn prod-btn" (click)="addProdToCart(product)">Add to Cart</button>
+            <a routerLink="/products" class="prod-link text-secondary">Back to Product List</a>
+        </div>
+    </div>

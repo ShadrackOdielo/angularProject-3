@@ -1,0 +1,10 @@
+    <div class="cart-item">
+        <img src="../../../assets/x.svg" class="close-icon" (click)="onRemoveItem(cartItem.id)">
+        <img class="img" src="{{ cartItem.url }}" alt="cartItem.name">
+        <div class="cart-item-details">
+            <span id="name">{{ cartItem.name}}</span>
+            <span>${{cartItem.price}}</span>
+            <span>Quantity: <input class="number-input" type="number" min="0" [(ngModel)]="cartItem.qty" (ngModelChange)="updateQuantity()" (click)="tots.emit(total)"></span>
+        </div>
+    </div>
+

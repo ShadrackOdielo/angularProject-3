@@ -1,0 +1,26 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-class {
+    margin-left:4%;
+    border: 1px solid #13012b;
+    border-radius: 5%;
+    padding: 50px;
+}
+
+.submit-btn {
+    background-color: #13012b;
+    color:#ffffff;
+}
+.paragraph{
+    font-size: small;
+    color:#505050;
+}
+
+.error {
+    font-size: small;
+    color:#ff0000; 
+}

@@ -1,0 +1,40 @@
+.prod-img {
+    border-radius: 10px;
+    width: 320px;
+    border: 1px solid #13012b;
+  }
+
+  .select-input {
+    width: 150px; 
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+  
+  .prod-btn{
+    margin-top: 5%;
+    background-color: #13012b;
+    color: #ffffff;
+  }
+
+  .detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+  }
+
+  .prod-link{
+    display: block;
+    margin-top: 5%;
+   }
+
+   .prod-desc {
+    display: block;
+    color: #13012b;
+    margin-top:2%;
+    margin-bottom: 5%;
+   }
+
+  .detail-item {
+    margin-left: 5%;
+  }

@@ -1,0 +1,20 @@
+<form #form="ngForm" action="" class="form-class" (ngSubmit)="onSubmit()">
+    <label for="basic-url" class="form-label">Full Name</label>
+    <div class="input-group mb-3">
+        <input type="text" name="name" minlength="3" class="form-control" required [(ngModel)]="name" placeholder="(Minimum of 3 Characters)" aria-label="Username" aria-describedby="basic-addon1" #uname="ngModel"/>
+        <p *ngIf="uname.errors?.['minlength']" class="error">Please the Minimum length of words acceptable is 3</p>
+    </div>
+    <label for="basic-url" class="form-label">Address</label>
+    <div class="input-group mb-3">
+        <input type="text" name="addr" minlength="6"  [(ngModel)]="addr" class="form-control" required placeholder="(Minimum of 6 Characters)" aria-label="Address" aria-describedby="basic-addon1" #address="ngModel">
+        <p *ngIf="address.errors?.['minlength']" class="error">Please the Minimum length of words acceptable is 6</p>
+    </div>
+    <label for="basic-url" class="form-label">Credit Card Number</label>
+    <div class="input-group mb-3">
+        <input type="number" minlength="16" name="num" [(ngModel)]="num" class="form-control" required placeholder="(16-Digit Number)" aria-label="card" aria-describedby="basic-addon1" (ngModelChange)="checkCardLength(num)">
+        <!-- <p *ngIf="checkCardLength(num)=='error'" class="error">Please the Minimum length of words acceptable is 16</p> -->
+    </div>
+    <p class="paragraph">We will never share your details with anyone else</p>
+    <button class="btn submit-btn" [disabled]="total==0 || form.invalid" >Submit</button>
+</form>
+

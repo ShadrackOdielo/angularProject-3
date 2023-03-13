@@ -1,0 +1,4 @@
+<h1 class="product-header">PRODUCTS PAGE</h1>
+<div class="product-container justify-content-center">
+    <app-product-item *ngFor="let product of productlist" [prod]="product" (quantity)="qty" ></app-product-item>
+</div>
