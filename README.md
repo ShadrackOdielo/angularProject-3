@@ -23,10 +23,11 @@ This application consists of the following components:
 - Product list page
 ![MyStore screenshot](screenshots/products.png "MyStore website")
 - Product detail page
-![MyStore screenshot](screenshots/ "MyStore website")
+![MyStore screenshot](screenshots/product-item.png"MyStore website")
 - Shopping cart page
-![MyStore screenshot](/path/to/mystore-screenshot.png "MyStore website")
+![MyStore screenshot](screenshots/checkout.png "MyStore website")
 - Product item component
+
 
 ## Models
 
@@ -58,3 +59,6 @@ This application includes unit tests and end-to-end tests. To run the tests, fol
 ## License
 
 This project is licensed under the MIT License. See the LICENSE.md file for details.
+
+## Authors
+-shadrack omondi

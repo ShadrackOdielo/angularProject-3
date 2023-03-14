@@ -10,7 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class ProductItemComponent implements OnInit{
   @Input() prod:Products;
   @Output() addCart:EventEmitter<Products>=new EventEmitter; 
-  quantity:number=0;
+  quantity:number=1;
   qty!:number;
 
   constructor (private cartService: CartService) {

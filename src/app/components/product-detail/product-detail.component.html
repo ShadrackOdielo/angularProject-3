@@ -6,7 +6,7 @@
         <span><h1>{{ product.name }}</h1></span>
         <span class="prod-desc"> {{ product.description }}</span>
         <span>$ {{ product.price }}</span>
-        <span><input type="number" min="1" max="20" class="form-control select-input" [(ngModel)]="quantity" (change)="validateQuantity()" placeholder="num"/></span>
+        <!-- <span><input type="number" min="1" max="20" class="form-control select-input" [(ngModel)]="quantity" (change)="validateQuantity()" placeholder="num"/></span> -->
         <button class="btn prod-btn" (click)="addProdToCart(product)" [disabled]="!isValidQuantity">Add to Cart</button>
         <a routerLink="/products" class="prod-link text-secondary">Back to Product List</a>
     </div>
