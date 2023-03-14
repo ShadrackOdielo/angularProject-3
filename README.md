@@ -1,40 +1,60 @@
-# UdacityMyStoreAngularProject
+# MyStore Angular Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
+## Description
 
+This is a web application for an online store that allows users to view and purchase products. The application features a home page, a product list page, a product detail page, and a shopping cart page. Users can add products to their cart, remove items from their cart, and checkout.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To run this application on your local machine, follow these steps:
 
-## Running unit tests
+1. Clone the repository
+2. Install the dependencies by running `npm install`
+3. Start the development server by running `ng serve --port 3000`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Components
 
-## Running end-to-end tests
+This application consists of the following components:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Home page
+![HomePage screenshot](screenshots/home.png "MyStore website")
+- Product list page
+![MyStore screenshot](screenshots/products.png "MyStore website")
+- Product detail page
+![MyStore screenshot](screenshots/ "MyStore website")
+- Shopping cart page
+![MyStore screenshot](/path/to/mystore-screenshot.png "MyStore website")
+- Product item component
 
-## Further help
+## Models
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This application uses the following models:
 
-#
+- Product model
 
- ## Project Setup
+## Routing
 
- 1. Clone the repository
- 2. Install the dependencies by running 'npm install'.
- 3. ng serve --port 3000 is run to start the development server.
+This application uses the Angular Router to navigate between pages.
 
- ## Features
+## Development
 
- 1. view Home Page
- 2. View product list
- 3. View product detail
- 4. Add product to cart
- 5. Remove item in cart or empty the cart
- 6. Checkout 
+To contribute to this project, follow these steps:
 
- Navigate to http://localhost:3000/ if you run ng serve --port 3000, or http://localhost:4200/ if you run ng serve only. The app will automatically reload if you change any of the source files.
+1. Fork the repository
+2. Create a new branch for your feature or bugfix
+3. Make your changes and commit them
+4. Push your changes to your forked repository
+5. Create a pull request to merge your changes back into the main repository
+
+## Testing
+
+This application includes unit tests and end-to-end tests. To run the tests, follow these steps:
+
+- To run unit tests: `ng test`
+- To run end-to-end tests: `ng e2e`
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE.md file for details.

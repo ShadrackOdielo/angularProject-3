@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProdListService } from 'src/app/services/prod-list.service';
 import { Products } from 'src/app/models/productsModel';
@@ -9,32 +9,43 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
-export class ProductDetailComponent implements OnInit{
-  id!:number;
-  prodList:Products[]=[];
+export class ProductDetailComponent implements OnInit {
+  id!: number;
+  prodList: Products[] = [];
   product!: Products;
-  quantity:number=0;
-  constructor( private route: ActivatedRoute, private prodService: ProdListService, private cartService: CartService ) { }
+  quantity = 1;
+  isValidQuantity = true;
+
+  constructor(
+    private route: ActivatedRoute,
+    private prodService: ProdListService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
-    
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       this.id = Number(params.get('id'));
-    })
-
-    this.prodService.getProducts().subscribe(data => {
-      this.prodList = data;
-      this.prodService.getProductsById().subscribe(() => {
-       this.product=this.prodList.filter((item) => item.id === this.id)[0];
-      });
     });
 
+    this.prodService.getProducts().subscribe((data) => {
+      this.prodList = data;
+      this.prodService.getProductsById().subscribe(() => {
+        this.product = this.prodList.filter((item) => item.id === this.id)[0];
+      });
+    });
   }
 
-  addProdToCart(prod:Products): void {
-    this.product.qty=this.quantity;
+  addProdToCart(prod: Products): void {
+    this.product.qty = this.quantity;
     this.cartService.addToCart(this.product);
-    alert('Item Added to Cart!')
+    alert('Item Added to Cart!');
+  }
+
+  validateQuantity(): void {
+    if (this.quantity <= 0 || this.quantity > 20) {
+      this.isValidQuantity = false;
+    } else {
+      this.isValidQuantity = true;
+    }
   }
 }
-

@@ -12,7 +12,7 @@
     <label for="basic-url" class="form-label">Credit Card Number</label>
     <div class="input-group mb-3">
         <input type="number" minlength="16" name="num" [(ngModel)]="num" class="form-control" required placeholder="(16-Digit Number)" aria-label="card" aria-describedby="basic-addon1" (ngModelChange)="checkCardLength(num)">
-        <!-- <p *ngIf="checkCardLength(num)=='error'" class="error">Please the Minimum length of words acceptable is 16</p> -->
+        <p *ngIf="checkCardLength(num)=='error'" class="error">Please the Minimum length of words acceptable is 16</p> 
     </div>
     <p class="paragraph">We will never share your details with anyone else</p>
     <button class="btn submit-btn" [disabled]="total==0 || form.invalid" >Submit</button>

@@ -1,17 +1,15 @@
 <div class="container text-center prod-item">
-    <div class="col-6">
-        <div class="card" style="width: 18rem;">
-          <a routerLink="/products/{{prod.id}}">
-            <img src="{{ prod.url }}" class="card-img-top prod-img" alt="...">
-          </a>
-            <div class="card-body">
-            <h5 class="card-title">{{prod.name}}</h5>
-            <p class="card-text">$ {{prod.price}}</p>
-            <input type="number" min="0" class="form-control prod-qty" (change)="setQty($event)" />
-            {{qty}}
-            <button class="btn prod-btn" (click)="addProdToCart(prod)">Add to Cart</button>
-            </div>
-        </div>
+  <div class="col-6">
+    <div class="card" >
+      <a routerLink="/products/{{prod.id}}">
+        <img src="{{ prod.url }}" class="card-img-top prod-img" alt="...">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">{{prod.name}}</h5>
+        <p class="card-text">$ {{prod.price}}</p>
+        <input type="number"  min="1" class="form-control prod-qty" [(ngModel)]="qty" placeholder="1"/>
+                <button class="btn prod-btn" [disabled]="qty < 1" (click)="addProdToCart(prod)">Add to Cart</button>
+      </div>
     </div>
+  </div>
 </div>
-

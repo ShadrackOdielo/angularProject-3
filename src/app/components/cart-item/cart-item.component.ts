@@ -26,8 +26,14 @@ export class CartItemComponent implements OnInit{
     }
   }
  
+ // ngOnInit(): void {
+  //}
   ngOnInit(): void {
+    if (!this.cartItem.qty) {
+      this.cartItem.qty = 1; // default value set to 1
+    }
   }
+  
   updateQuantity(){
     this.cartProduct=this.cartService.getCart();
     this.cartService.updateQty(this.cartItem.id,this.cartItem.qty);
